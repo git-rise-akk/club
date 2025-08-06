@@ -1,0 +1,40 @@
+@use  'themes';
+@use  'fonts';
+@use  'calendar';
+@use  'toggle';
+
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
