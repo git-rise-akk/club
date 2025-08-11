@@ -30,6 +30,7 @@
           <img class="collage__queen" src="/src/assets/images/pages/home/queen.png"/>
           <img class="collage__king" src="/src/assets/images/pages/home/king.png"/>
           <img class="collage__city" src="/src/assets/images/pages/home/city.png"/>
+          <img class="collage__textures" src="/src/assets/images/pages/home/textures.webp"/>
           <img class="collage__pawn" src="/src/assets/images/pages/home/pawn.png"/>
           <img class="collage__knight" src="/src/assets/images/pages/home/knight.png"/>
         </div>
@@ -98,7 +99,7 @@
               </div>
               <div class="table__line">
                 <div class="table__header">Взнос на телеграммы:</div>
-                <div class="table__info">100 руб. 21 руб. 16 коп.</div>
+                <div class="table__info"><span class="discount">100 руб.</span> 21 руб. 16 коп.</div>
               </div>
             </div>
             <div class="session-info__support">По всем вопросам обращаться в администрацию к К. Михельсону</div>
@@ -151,7 +152,8 @@
           </button>
           <div class="controls__counter">
             <span class="controls__current-element">3</span>
-            <span class="controls__total-elements">/ 6</span>
+            <span class="controls__separator">/</span>
+            <span class="controls__total-elements">6</span>
           </div>
           <button class="controls__button controls__button_next" aria-label="Следующий">
             <svg width="8.46" height="16.92">
@@ -160,54 +162,56 @@
           </button>
         </div>
         <div class="cards">
-          <div class="card">
-            <div class="card__photo">
-              <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Хосе-Рауль Капабланка" />
-            </div>
-            <h3 class="card__name">Хосе-Рауль Капабланка</h3>
-            <p class="card__desc">Чемпион мира по шахматам</p>
-            <a href="#" class="more">Подробнее</a>
-          </div>
-          <div class="card">
-            <div class="card__photo">
-              <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Эммануил Ласкер" />
-            </div>
-            <h3 class="card__name">Эммануил Ласкер</h3>
-            <p class="card__desc">Чемпион мира по шахматам</p>
-            <a href="#" class="more">Подробнее</a>
-          </div>
-          <div class="card">
-            <div class="card__photo">
-              <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Александр Алехин" />
-            </div>
-            <h3 class="card__name">Александр Алехин</h3>
-            <p class="card__desc">Чемпион мира по шахматам</p>
-            <a href="#" class="more">Подробнее</a>
-          </div>
-          <div class="card">
-            <div class="card__photo">
-              <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Арон Нимцович" />
-            </div>
-            <h3 class="card__name">Арон Нимцович</h3>
-            <p class="card__desc">Чемпион мира по шахматам</p>
-            <a href="#" class="more">Подробнее</a>
-          </div>
-          <div class="card">
-            <div class="card__photo">
-              <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Рихард Рети" />
-            </div>
-            <div class="card__name">Рихард Рети</div>
-            <p class="card__desc">Чемпион мира по шахматам</p>
-            <a href="#" class="more">Подробнее</a>
-          </div>
-          <div class="card">
-            <div class="card__photo">
-              <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Остап Бендер" />
-            </div>
-            <div class="card__name">Остап Бендер</div>
-            <p class="card__desc">Гроссмейстер</p>
-            <a href="#" class="more">Подробнее</a>
-          </div>
+          <ul class="cards__inner">
+            <li class="card">
+              <div class="card__photo">
+                <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Хосе-Рауль Капабланка" />
+              </div>
+              <h3 class="card__name">Хосе-Рауль Капабланка</h3>
+              <p class="card__desc">Чемпион мира по шахматам</p>
+              <a href="#" class="more">Подробнее</a>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Эммануил Ласкер" />
+              </div>
+              <h3 class="card__name">Эммануил Ласкер</h3>
+              <p class="card__desc">Чемпион мира по шахматам</p>
+              <a href="#" class="more">Подробнее</a>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Александр Алехин" />
+              </div>
+              <h3 class="card__name">Александр Алехин</h3>
+              <p class="card__desc">Чемпион мира по шахматам</p>
+              <a href="#" class="more">Подробнее</a>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Арон Нимцович" />
+              </div>
+              <h3 class="card__name">Арон Нимцович</h3>
+              <p class="card__desc">Чемпион мира по шахматам</p>
+              <a href="#" class="more">Подробнее</a>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Рихард Рети" />
+              </div>
+              <div class="card__name">Рихард Рети</div>
+              <p class="card__desc">Чемпион мира по шахматам</p>
+              <a href="#" class="more">Подробнее</a>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img class="photo" src="/src/assets/images/pages/participants/default.webp" alt="Остап Бендер" />
+              </div>
+              <div class="card__name">Остап Бендер</div>
+              <p class="card__desc">Гроссмейстер</p>
+              <a href="#" class="more">Подробнее</a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

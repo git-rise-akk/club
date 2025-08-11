@@ -119,7 +119,7 @@ ul {
     border: none;
     cursor: pointer;
     background-color: var(--button-round-default);
-    transition: background-color var(--anim-duration);
+    transition: background-color (--anim-duration);
     &_next {
       svg {
         transform: rotate(180deg);
@@ -132,7 +132,8 @@ ul {
       fill: transparent;
     }
   }
-  &__total-elements {
+  &__total-elements,
+  &__separator {
     opacity: .6;
   }
 }
@@ -149,6 +150,7 @@ ul {
   height: 35px;
   box-sizing: border-box;
   font-size: 16px;
+  font-weight: 500;
   background-color: var(--button-more-default);
   border: 1px solid var(--button-more-hover);
   transition: background-color var(--anim-duration), color var(--anim-duration);
@@ -201,6 +203,12 @@ ul {
     height: 100%;
     background: red;
   }
+}
+
+.discount {
+  text-decoration-line: line-through;
+  text-decoration-color: var(--text-highlighting);
+  text-decoration-thickness: 2px;
 }
 
 

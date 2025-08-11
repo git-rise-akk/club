@@ -67,6 +67,8 @@
         display: flex;
         padding: 16px 0;
         border-top: 2px solid #D0D0D0;
+        font-size: 20px;
+        line-height: 120%;
         &:first-child {
           padding-top: 0;
           border-top: 0;
@@ -86,7 +88,7 @@
       &__header {
         position: relative;
         opacity: .7;
-        width: 35%;
+        width: 43%;
         &::after {
           content: '';
           position: absolute;
@@ -101,6 +103,9 @@
         flex: 1;
         font-weight: 600;
         padding-left: 16px;
+        .discount {
+          margin-right: 12px;
+        }
       }
     }
     &__support {
