@@ -1,0 +1,46 @@
+.section_participants {
+  display: grid;
+  grid-template-columns: auto 151px;
+  grid-template-rows: auto auto;
+  grid-row-gap: 60px;
+  grid-auto-rows: auto;
+  margin: 200px 0 140px;
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  .cards {
+    grid-area: 2 / 1 / 3 / 3;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 37px;
+      &__photo {
+        overflow: hidden;
+        width: 320px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+      }
+      &__name {
+       font-family: Golos-Text, sans-serif;
+       font-weight: 600;
+       font-size: 24px;
+       line-height: 120%;
+       text-transform: none;
+       margin: 28px 0 0;
+      }
+      &__desc {
+        margin: 6px 0;
+        opacity: .6;
+        line-height: 120%;
+      }
+      .more {
+        margin-top: 20px;
+      }
+    }
+  }
+}

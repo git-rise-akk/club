@@ -1,0 +1,113 @@
+.section_event {
+  margin-top: 80px;
+  .lecture-info {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    &__image {
+      position: relative;
+      width: 394px;
+      min-width: 394px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      .img-people {
+        width: 100%;
+        height: auto;
+      }
+      .img-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: color-burn;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__text {
+      .text-part {
+        display: inline;
+      }
+    }
+  }
+  .session-info {
+    display: flex;
+    gap: 17px;
+    margin-top: 64px;
+    &__text {
+      flex: 1;
+    }
+    &__image {
+      position: relative;
+      width: 500px;
+      .img-human {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 526px;
+        height: auto;
+      }
+      .img-overlay {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        max-width: none;  
+        height: auto;
+        mix-blend-mode: color-burn;
+      }
+    }
+    .table {
+      position: relative;
+      margin-top: 60px;
+      width: 100%;
+      &__line {
+        display: flex;
+        padding: 16px 0;
+        border-top: 2px solid #D0D0D0;
+        &:first-child {
+          padding-top: 0;
+          border-top: 0;
+          .table__header::after {
+            top: 0;
+            height: calc(100% + 16px);
+          }
+        }
+        &:last-child {
+          padding-bottom: 0;
+          .table__header::after {
+            top: -16px;
+            height: calc(100% + 16px);
+          }
+        }
+      }
+      &__header {
+        position: relative;
+        opacity: .7;
+        width: 35%;
+        &::after {
+          content: '';
+          position: absolute;
+          top: -16px;
+          right: 0;
+          width: 2px;
+          height: calc(100% + 32px);
+          background: #D0D0D0;
+        }
+      }
+      &__info {
+        flex: 1;
+        font-weight: 600;
+        padding-left: 16px;
+      }
+    }
+    &__support {
+      margin-top: 48px;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--text-accent);
+    }
+  }
+}

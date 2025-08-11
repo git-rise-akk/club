@@ -1,0 +1,129 @@
+.section_home {
+  width: 100%;
+  height: 760px;
+  // height: 100dvh;
+  background: var(--main-bg);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    width: 100dvw;
+    height: 100%;
+    background: var(--main-bg);
+    pointer-events: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    width: 100dvw;
+    height: 100%;
+    background-image: url('/src/assets/images/pages/home/textures.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-burn;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .collage {
+    position: absolute;
+    height: 100%;
+    width: 1604px;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    &__sun {
+      position: absolute;
+      right: 9.41%;
+      bottom: 84px;
+      max-width: none;  
+      height: auto;
+      animation: spin 25s linear infinite;
+    }
+    &__queen {
+      position: absolute;
+      right: 18.27%;
+      bottom: 276px;
+      transform: rotate(8deg);
+      max-width: none;  
+      height: auto;
+    }
+    &__king {
+      position: absolute;
+      right: 39.78%;
+      bottom: 169px;
+      transform: rotate(-6deg);
+      max-width: none;  
+      height: auto;
+    }
+    &__city {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      max-width: none;  
+      height: auto;
+    }
+    &__pawn {
+      position: absolute;
+      right: 10.16%;
+      bottom: 20px;
+      max-width: none;  
+      height: auto;
+    }
+    &__knight {
+      position: absolute;
+      right: 29.49%;
+      bottom: -39px;
+      transform: rotate(-11deg);
+      max-width: none;  
+      height: auto;
+    }
+  }
+
+
+  &__content {
+    position: relative;
+    padding-top: 124px;
+    z-index: 1;
+    max-width: 542px;
+    box-sizing: initial;
+
+    .title {
+      &__line {
+        display: block;
+        &_n3 {
+          padding-left: 91px;
+        }
+        &_n4 {
+          padding-left: 33px;
+        }
+      }
+    }
+    .subtitle {
+      font-size: 18px;
+      line-height: 130%;
+      text-align: center;
+      margin: 24px 0 0;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+  }
+
+  .running-line {
+    bottom: 0;
+  }
+}
