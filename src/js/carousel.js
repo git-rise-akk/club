@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const inner = document.querySelector('.cards__inner');
   const cards = inner.querySelectorAll('.card');
-  const prevBtn = document.querySelector('.controls__button_prev');
-  const nextBtn = document.querySelector('.controls__button_next');
-  const counterCurrent = document.querySelector('.controls__current-element');
-  const counterTotal = document.querySelector('.controls__total-elements');
+  const prevBtn = document.querySelector('.controls_participants .controls__button_prev');
+  const nextBtn = document.querySelector('.controls_participants .controls__button_next');
+  const counterCurrent = document.querySelector('.controls_participants .controls__current-element');
+  const counterTotal = document.querySelector('.controls_participants .controls__total-elements');
 
   const visibleCount = 3;
   const cardCount = cards.length;

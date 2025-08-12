@@ -1,5 +1,6 @@
 import '../style/main.scss';
 import './carousel.js';
+import './init.js';
 
 fetch('/sprite.svg')
   .then(res => res.text())

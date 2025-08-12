@@ -1,3 +1,5 @@
+@use  '../mixins'  as *;
+
 .header {
   position: absolute;
   top: 0;
@@ -14,12 +16,23 @@
       display: flex;
       align-items: center;
       gap: 6.35px;
+      &__icon {
+        height: 31px;
+        width: 92px;
+        @include mobile {
+          height: 27px;
+          width: 80px;
+        }
+      }
       &__name {
         font-size: 17px;
         font-weight: 700;
         text-transform: uppercase;
         line-height: 108%;
         color: var(--text-logo);
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
   }

@@ -1,5 +1,10 @@
+@use  '../mixins'  as *;
+
 .section_stages {
   margin-top: 200px;
+  @include mobile {
+    margin-top: 120px;  
+  }
   .title {
     &__wrapper-subtitle {
       position: relative;
@@ -17,32 +22,127 @@
       font-weight: 400;
       text-transform: none;
       line-height: 120%;
+      @include mobile {
+        position: relative;
+        bottom: initial;
+        left: initial;
+        width: 100%;
+        margin: 12px 0 0;
+        font-size: 18px;
+      }
     }
   }
   .stages {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    position: relative;
     margin-top: 67px;
-    width: 100%;
-    height: 400px;
+    @include mobile {
+      margin-top: 55px;
+      padding-top: 93px;
+    }
+    &__inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      width: 100%;
+      height: 400px;
+      will-change: transform, mix-blend-mode;
+      @include mobile {
+        display: flex;
+        height: 300px;
+      }
+    }
     &__item {
+      position: relative;
+      display: flex;
+      gap: 20px;
+      &:first-child {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+      &:nth-child(2) {
+        grid-area: 1 / 3 / 3 / 4;
+      }
+      &:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      &:last-child {
+        grid-area: 3 / 2 / 4 / 4;
+        .stage__text {
+          width: 446px;
+        }
+      }
+            @include mobile {
+        flex-direction: column;
+        min-width: 100%;
+        height: 100%;
+        gap: 28px;
+        padding: 62px 24px 34px 20px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          background-image: url('/src/assets/images/pages/stages/background.webp');
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: .8;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          background-image: url('/src/assets/images/pages/stages/textures.webp');
+          background-repeat: no-repeat;
+          background-size: cover;
+          mix-blend-mode: color-burn;
+        }
+      }
+    }
+    &__img-plane {
+      position: absolute;
+      right: -51px;
+      bottom: 45px;
+      padding: 0;
+      transform: rotate(-15deg);
+      @include mobile {
+        bottom: initial;
+        top: 0;
+        transform: rotate(-19deg);
+        width: 318px;
+        right: -2.4px;
+      }
+      &::after {
+        content: none;
+      }
+      &::before {
+        content: none;
+      }
+    }
+    .controls {
+      margin-top: 28px;
+      display: none;
+      justify-content: center;
+      gap: 16px;
+      @include mobile {
+        display: flex;
+      }
+    }
+    .stage {
       position: relative;
       padding: 20px;
       box-sizing: border-box;
       display: flex;
       gap: 16px;
-      &:nth-child(3) {
-        grid-area: 1 / 3 / 3 / 4;
-      }
-      &:nth-last-child(2) {
-        grid-area: 3 / 2 / 4 / 4;
-        .stages__text {
-          width: 446px;
-        }
-      }
+      flex: 1;
       &::before {
         content: '';
         position: absolute;
@@ -69,36 +169,36 @@
         background-size: cover;
         mix-blend-mode: color-burn;
       }
-      &_plane {
-        position: absolute;
-        right: -51px;
-        bottom: 45px;
-        padding: 0;
-        transform: rotate(-15deg);
-        &::after {
-          content: none;
+      &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background: #fff;
+        font-weight: 600;
+        z-index: 1;
+      }
+      &__text {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 120%;
+        z-index: 1;
+        @include mobile {
+          font-size: 18px;
         }
+      }
+      @include mobile {
+        padding: 0;
+        flex: initial;
         &::before {
           content: none;
         }
+        &::after {
+          content: none;
+        }
       }
-    }
-    &__number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 36px;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      background: #fff;
-      font-weight: 600;
-      z-index: 1;
-    }
-    &__text {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 120%;
-      z-index: 1;
     }
   }
 }

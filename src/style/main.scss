@@ -1,3 +1,4 @@
+@use  'mixins'  as *;
 @use  'fonts';
 @use  'color';
 @use  'modern-normalize';
@@ -36,6 +37,9 @@ body {
   align-items: center;
   padding: 0 5.27%;
   overflow: hidden scroll;
+  @include mobile {
+    padding: 0 20px;
+  }
 }
 
 
@@ -75,6 +79,10 @@ ul {
   color: #fff;
   overflow: hidden;
   z-index: 2;
+  @include mobile {
+    height: 38px;
+    font-size: 16px;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -107,7 +115,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 151px;
   &__button {
     display: flex;
     align-items: center;
@@ -135,6 +142,20 @@ ul {
   &__total-elements,
   &__separator {
     opacity: .6;
+  }
+  &__dots {
+    display: flex;
+    gap: 6px;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--button-round-disabled);
+      transition: background-color var(--anim-duration);
+      &_active {
+        background-color: var(--button-round-default);
+      }
+    }
   }
 }
 
@@ -167,6 +188,13 @@ ul {
   font-weight: 500;
   line-height: 130%;
   text-align: center;
+  @include mobile {
+    height: 47px;
+    width: 100%;
+    br {
+      display: none;
+    }
+  }
   &_type-one {
     color: #fff;
     background-color: var(--button-big-one-default);
@@ -176,6 +204,10 @@ ul {
     border: 2px solid var(--button-big-two-hover);
     background-color: var(--button-big-two-default);
     box-sizing: border-box;
+    @include mobile {
+      border: none;
+      background-color: rgba($color: #fff, $alpha: .9);
+    }
   }
 }
 
@@ -224,16 +256,27 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 60px;
   line-height: 110%;
+  @include mobile {
+    font-size: 36px;
+    line-height: 110%;
+  }
 }
 
 h2 {
   font-size: 54px;
   line-height: 120%;
+  @include mobile {
+    font-size: 36px;
+    line-height: 110%;
+  }
 }
 
 h3 {
   font-size: 36px;
   line-height: 135%;
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .highlighting {
