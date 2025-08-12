@@ -133,7 +133,6 @@
     }
   }
 
-
   &__content {
     position: relative;
     padding-top: 124px;
@@ -150,11 +149,19 @@
     .title {
       &__line {
         display: block;
+        &_n1 {
+          animation: movement-text-l var(--anim-duration-text);
+        }
+        &_n2 {
+          animation: movement-text-r var(--anim-duration-text);
+        }
         &_n3 {
+          animation: movement-text-l var(--anim-duration-text);
           padding-left: 91px;
         }
         &_n4 {
           padding-left: 33px;
+          animation: movement-text-r var(--anim-duration-text);
           @include mobile {
             padding-left: initial;
             text-align: right;

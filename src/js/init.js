@@ -39,4 +39,30 @@ document.addEventListener('DOMContentLoaded', () => {
   buttonBigTwo.addEventListener('click', () => {
     scrollToElement('.section_stages');
   });
+
+  document.body.addEventListener("scroll", () => {
+    const scrollY = document.body.scrollTop;
+
+    const king = document.querySelector(".collage__king");
+    const queen = document.querySelector(".collage__queen");
+    const knight = document.querySelector(".collage__knight");
+
+    if (king) {
+      const translateY = scrollY * -0.15;
+      const translateX = scrollY * -0.05;
+      king.style.transform = `translate(${translateX}px, ${translateY}px) rotate(-6deg)`;
+    }
+
+    if (queen) {
+      const translateY = scrollY * -0.3;
+      const translateX = scrollY * 0.1;
+      queen.style.transform = `translate(${translateX}px, ${translateY}px) rotate(8deg)`;
+    }
+
+    if (knight) {
+      const translateY = scrollY * -0.1;
+      const translateX = scrollY * -0.1;
+      knight.style.transform = `translate(${translateX}px, ${translateY}px) rotate(-11deg)`;
+    }
+  });
 });
