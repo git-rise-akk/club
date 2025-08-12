@@ -35,11 +35,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5.27%;
   overflow: hidden scroll;
-  @include mobile {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 }
 
 
@@ -79,7 +76,7 @@ ul {
   color: #fff;
   overflow: hidden;
   z-index: 2;
-  @include mobile {
+  @include tablet {
     height: 38px;
     font-size: 16px;
   }
@@ -133,6 +130,7 @@ ul {
       }
     }
     &_disabled {
+      cursor: default;
       background-color: var(--button-round-disabled);
     }
     svg {
@@ -204,7 +202,7 @@ ul {
     border: 2px solid var(--button-big-two-hover);
     background-color: var(--button-big-two-default);
     box-sizing: border-box;
-    @include mobile {
+    @include desktop {
       border: none;
       background-color: rgba($color: #fff, $alpha: .9);
     }
@@ -256,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 60px;
   line-height: 110%;
-  @include mobile {
+  @include laptop {
     font-size: 36px;
     line-height: 110%;
   }
@@ -265,7 +263,7 @@ h1 {
 h2 {
   font-size: 54px;
   line-height: 120%;
-  @include mobile {
+  @include laptop {
     font-size: 36px;
     line-height: 110%;
   }
@@ -274,7 +272,7 @@ h2 {
 h3 {
   font-size: 36px;
   line-height: 135%;
-  @include mobile {
+  @include laptop {
     font-size: 28px;
   }
 }
@@ -285,7 +283,7 @@ h3 {
 }
 
 @media (hover: hover) {
-  .controls__button:hover {
+  .controls__button:not(.controls__button_disabled):hover {
     background-color: var(--button-round-hover);
   }
   .more:hover {

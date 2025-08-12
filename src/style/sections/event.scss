@@ -6,7 +6,10 @@
     display: flex;
     align-items: center;
     gap: 64px;
-    @include mobile {
+    @include laptop {
+      gap: 12px;
+    }
+    @include tablet {
       height: 565px;
       gap: initial;
     }
@@ -17,11 +20,13 @@
       height: 250px;
       border-radius: 50%;
       overflow: hidden;
-      @include mobile {
+      @include tablet {
         position: absolute;
-        width: 100%;
-        height: 212px;
-        min-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 335px;
+        min-width: 335px;
+        height: 213px;
       }
       .img-people {
         width: 100%;
@@ -42,7 +47,7 @@
       .text-part {
         display: inline;
       }
-      @include mobile {
+      @include tablet {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -51,10 +56,11 @@
     }
   }
   .session-info {
+    position: relative;
     display: flex;
     gap: 17px;
     margin-top: 64px;
-    @include mobile {
+    @include tablet {
       margin-top: 34px;
       flex-direction: column;
       gap: 24px;
@@ -62,14 +68,33 @@
     &__text {
       flex: 1;
     }
+    &__title {
+      @include laptop {
+        width: 40%;
+        margin-left: auto;
+      }
+      @include tablet {
+        width: initial;
+        margin-left: initial;
+      }
+    }
     &__image {
       position: relative;
       width: 500px;
-      @include mobile {
+      @include laptop {
+        position: absolute;
+        top: 0;
+        height: 350px;
+      }
+      @include tablet {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 335px;
+        top: initial;
+        height: initial;
+        margin: 0 auto;
       }
       .img-human {
         position: absolute;
@@ -78,13 +103,18 @@
         transform: translateY(-50%);
         width: 526px;
         height: auto;
-        @include mobile {
+        @include laptop {
+          height: 100%;
+          width: auto;
+          left: 0;
+        }
+        @include tablet {
           position: relative;
           top: initial;
           right: initial;
           transform: initial;
-          width: 100vw;
-          width: 100dvw;
+          height: auto;
+          width: 100%;
         }
       }
       .img-overlay {
@@ -95,9 +125,13 @@
         max-width: none;  
         height: auto;
         mix-blend-mode: color-burn;
-        @include mobile {
-          width: 100vw;
-          width: 100dvw;
+        @include laptop {
+          height: 100%;
+          width: auto;
+        }
+        @include tablet {
+          height: auto;
+          width: 100%;
           right: initial;
         }
       }
@@ -106,13 +140,19 @@
       position: relative;
       margin-top: 60px;
       width: 100%;
+      @include laptop {
+        margin-top: 180px;
+      }
+      @include tablet {
+        margin-top: 60px;
+      }
       &__line {
         display: flex;
         padding: 16px 0;
         border-top: 2px solid #D0D0D0;
         font-size: 20px;
         line-height: 120%;
-        @include mobile {
+        @include tablet {
           flex-direction: column;
           gap: 12px;
         }
@@ -145,7 +185,7 @@
           height: calc(100% + 32px);
           background: #D0D0D0;
         }
-        @include mobile {
+        @include tablet {
           width: 100%;
           &::after {
             content: none;
@@ -159,7 +199,7 @@
         .discount {
           margin-right: 12px;
         }
-        @include mobile {
+        @include tablet {
           padding-left: 0;  
         }
       }
@@ -169,8 +209,8 @@
       font-size: 20px;
       line-height: 120%;
       color: var(--text-accent);
-      @include mobile {
-        font-size: 18px;  
+      @include laptop {
+        font-size: 18px;
       }
     }
   }

@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  @include mobile {
+  @include tablet {
     padding: 78px 0 60px;
   }
   &::before {

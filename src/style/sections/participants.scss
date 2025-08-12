@@ -7,7 +7,7 @@
   grid-row-gap: 60px;
   grid-auto-rows: auto;
   margin: 200px 0 140px;
-  @include mobile {
+  @include tablet {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     gap: 40px 0;
@@ -21,7 +21,7 @@
     grid-area: 2 / 1 / 3 / 3;
     overflow: hidden;
     width: 100%;
-    @include mobile {
+    @include tablet {
       grid-row: 2;
     }
     &__inner {
@@ -30,7 +30,10 @@
       grid-auto-columns: calc((100% / 3) - 13px);
       grid-template-rows: 1fr;
       grid-auto-flow: column;
-      @include mobile {
+      @include laptop {
+        grid-auto-columns: calc((100% / 2) - 10px);
+      }
+      @include tablet {
         grid-auto-columns: 1fr;
       }
       .card {
@@ -39,7 +42,7 @@
         align-items: center;
         text-align: center;
         padding: 0 37px;
-        @include mobile {
+        @include tablet {
           width: calc(100vw - 40px);
           padding: 0;
         }
@@ -48,7 +51,7 @@
           width: 100%;
           aspect-ratio: 1 / 1;
           border-radius: 50%;
-          @include mobile {
+          @include tablet {
             width: 244px;
           }
           img {
@@ -65,7 +68,7 @@
           margin: 28px 0 0;
         }
         &__desc {
-          margin: 6px;
+          margin: 6px 0 0;
           opacity: .6;
           font-size: 20px;
           line-height: 120%;
@@ -78,7 +81,7 @@
   }
   .controls {
     width: 151px;
-    @include mobile {
+    @include tablet {
       grid-row: 3;
       margin: 0 auto;
     }

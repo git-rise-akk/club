@@ -2,7 +2,7 @@
 
 .section_stages {
   margin-top: 200px;
-  @include mobile {
+  @include tablet {
     margin-top: 120px;  
   }
   .title {
@@ -22,20 +22,23 @@
       font-weight: 400;
       text-transform: none;
       line-height: 120%;
-      @include mobile {
+      @include laptop {
+        font-size: 18px;
+        bottom: 2px;
+      }
+      @include tablet {
         position: relative;
         bottom: initial;
         left: initial;
         width: 100%;
         margin: 12px 0 0;
-        font-size: 18px;
       }
     }
   }
   .stages {
     position: relative;
-    margin-top: 67px;
-    @include mobile {
+    margin-top: 54px;
+    @include desktop {
       margin-top: 55px;
       padding-top: 93px;
     }
@@ -49,7 +52,14 @@
       width: 100%;
       height: 400px;
       will-change: transform, mix-blend-mode;
-      @include mobile {
+      @include desktop {
+        height: 300px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      @include tablet {
         display: flex;
         height: 300px;
       }
@@ -73,12 +83,12 @@
           width: 446px;
         }
       }
-            @include mobile {
+      @include desktop {
         flex-direction: column;
-        min-width: 100%;
-        height: 100%;
-        gap: 28px;
+        flex: 0 0 calc((100% - (20px * 2)) / 3); 
+        max-width: calc((100% - (20px * 2)) / 3);
         padding: 62px 24px 34px 20px;
+        gap: 28px;
         &::before {
           content: '';
           position: absolute;
@@ -106,6 +116,14 @@
           mix-blend-mode: color-burn;
         }
       }
+      @include laptop {
+        flex: 0 0 calc((100% - 20px) / 2);
+        max-width: calc((100% - 20px) / 2);
+      }
+      @include tablet {
+        min-width: 100%;
+        height: 100%;
+      }
     }
     &__img-plane {
       position: absolute;
@@ -113,12 +131,13 @@
       bottom: 45px;
       padding: 0;
       transform: rotate(-15deg);
-      @include mobile {
+      @include desktop {
         bottom: initial;
         top: 0;
         transform: rotate(-19deg);
         width: 318px;
-        right: -2.4px;
+        right: initial;
+        left: 18px;
       }
       &::after {
         content: none;
@@ -132,7 +151,7 @@
       display: none;
       justify-content: center;
       gap: 16px;
-      @include mobile {
+      @include desktop {
         display: flex;
       }
     }
@@ -185,11 +204,11 @@
         font-weight: 500;
         line-height: 120%;
         z-index: 1;
-        @include mobile {
+        @include desktop {
           font-size: 18px;
         }
       }
-      @include mobile {
+      @include desktop {
         padding: 0;
         flex: initial;
         &::before {

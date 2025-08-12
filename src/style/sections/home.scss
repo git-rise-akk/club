@@ -92,6 +92,9 @@
       width: 100dvw;
       height: 100%;
       mix-blend-mode: color-burn;
+      @include mobile {
+        width: auto;
+      }
     }
     &__city {
       position: absolute;
@@ -178,6 +181,14 @@
         flex-direction: column;
         gap: 14px;
         margin-top: 32px;
+      }
+      
+      
+      .button-big {
+        @include desktop {
+          flex-direction: column;
+          gap: 14px;
+        }
       }
     }
   }

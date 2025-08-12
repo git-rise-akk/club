@@ -19,7 +19,7 @@
       &__icon {
         height: 31px;
         width: 92px;
-        @include mobile {
+        @include tablet {
           height: 27px;
           width: 80px;
         }
@@ -30,7 +30,7 @@
         text-transform: uppercase;
         line-height: 108%;
         color: var(--text-logo);
-        @include mobile {
+        @include tablet {
           font-size: 14px;
         }
       }
