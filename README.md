@@ -1,0 +1,1 @@
+Ссылка на готовое задание: https://git-rise-akk.github.io/club/
