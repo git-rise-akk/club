@@ -76,7 +76,7 @@ ul {
   color: #fff;
   overflow: hidden;
   z-index: 2;
-  @include tablet {
+  @include mobile {
     height: 38px;
     font-size: 16px;
   }
