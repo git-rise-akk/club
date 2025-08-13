@@ -12,6 +12,7 @@
     "sprite": "node src/js/build-sprite.js"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass-embedded": "^1.90.0",
     "svgstore": "^3.0.1",
     "vite": "^7.0.4"
